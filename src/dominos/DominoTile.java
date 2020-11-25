@@ -43,21 +43,131 @@ public class DominoTile {
 	}
 	
 	public String toString() {
-		
-	//to right something because i thing some is bugged	
-		
-		return null;
+		return whichNumberIsIt(leftSideBlock,rightSideBlock);
 	}
 	
-	public String whichNumberIsIt( int Side) {
+	public String whichNumberIsIt( int leftSide, int rightSide) {
 		String picture = null;
-		if(Side==0) {
-			picture = "   \n   \n   ";
-		}else if(Side==1) {
-			picture = "   \n * \n   ";
+		
+		if(leftSide==0) {
+			if(rightSide==0) {
+				picture = "   |   \n   |   \n   |   ";
+			}else if(rightSide==1) {
+				picture = "   |   \n   | * \n   |   ";
+			}else if(rightSide==2) {
+				picture = "   |*  \n   |   \n   |  *";
+			}else if(rightSide==3) {
+				picture = "   |*  \n   | * \n   |  *";
+			}else if(rightSide==4) {
+				picture = "   |* *\n   |   \n   |* *";
+			}else if(rightSide==5) {
+				picture = "   |* *\n   | * \n   |* *";
+			}else if(rightSide==6) {
+				picture = "   |* *\n   |* *\n   |* *";
+			}
+		}else if(leftSide==1) {
+			if(rightSide==0) {
+				picture = "   |   \n * |   \n   |   ";
+			}else if(rightSide==1) {
+				picture = "   |   \n * | * \n   |   ";
+			}else if(rightSide==2) {
+				picture = "   |*  \n * |   \n   |  *";
+			}else if(rightSide==3) {
+				picture = "   |*  \n * | * \n   |  *";
+			}else if(rightSide==4) {
+				picture = "   |* *\n * |   \n   |* *";
+			}else if(rightSide==5) {
+				picture = "   |* *\n * | * \n   |* *";
+			}else if(rightSide==6) {
+				picture = "   |* *\n * |* *\n   |* *";
+			}
+		}else if(leftSide==2) {
+			if(rightSide==0) {
+				picture = "*  |   \n   |   \n  *|   ";
+			}else if(rightSide==1) {
+				picture = "*  |   \n   | * \n  *|   ";
+			}else if(rightSide==2) {
+				picture = "*  |*  \n   |   \n  *|  *";
+			}else if(rightSide==3) {
+				picture = "*  |*  \n   | * \n  *|  *";
+			}else if(rightSide==4) {
+				picture = "*  |* *\n   |   \n  *|* *";
+			}else if(rightSide==5) {
+				picture = "*  |* *\n   | * \n  *|* *";
+			}else if(rightSide==6) {
+				picture = "*  |* *\n   |* *\n  *|* *";
+			}
+		}else if(leftSide==3) {
+			if(rightSide==0) {
+				picture = "*  |   \n * |   \n  *|   ";
+			}else if(rightSide==1) {
+				picture = "*  |   \n * | * \n  *|  *";
+			}else if(rightSide==2) {
+				picture = "*  |*  \n * |   \n  *|  *";
+			}else if(rightSide==3) {
+				picture = "*  |*  \n * | * \n  *|  *";
+			}else if(rightSide==4) {
+				picture = "*  |* *\n * |   \n  *|* *";
+			}else if(rightSide==5) {
+				picture = "*  |* *\n * | * \n  *|* *";
+			}else if(rightSide==6) {
+				picture = "*  |* *\n * |* *\n  *|* *";
+			}
+		}else if(leftSide==4) {
+			if(rightSide==0) {
+				picture = "* *|   \n   |   \n* *|   ";
+			}else if(rightSide==1) {
+				picture = "* *|   \n   | * \n* *|   ";
+			}else if(rightSide==2) {
+				picture = "* *|*  \n   |   \n* *|  *";
+			}else if(rightSide==3) {
+				picture = "* *|*  \n   | * \n* *|  *";
+			}else if(rightSide==4) {
+				picture = "* *|* *\n   |   \n* *|* *";
+			}else if(rightSide==5) {
+				picture = "* *|* *\n   | * \n* *|* *";
+			}else if(rightSide==6) {
+				picture = "* *|* *\n   |* *\n* *|* *";
+			}
+		}else if(leftSide==5) {
+			if(rightSide==0) {
+				picture = "* *|   \n * |   \n* *|   ";
+			}else if(rightSide==1) {
+				picture = "* *|   \n * | * \n* *|   ";
+			}else if(rightSide==2) {
+				picture = "* *|*  \n * |   \n* *|  *";
+			}else if(rightSide==3) {
+				picture = "* *|*  \n * | * \n* *|  *";
+			}else if(rightSide==4) {
+				picture = "* *|* *\n * |   \n* *|* *";
+			}else if(rightSide==5) {
+				picture = "* *|* *\n * | * \n* *|* *";
+			}else if(rightSide==6) {
+				picture = "* *|* *\n * |* *\n* *|* *";
+			}
+		}else {
+			if(rightSide==0) {
+				picture = "* *|   \n* *|   \n* *|   ";
+			}else if(rightSide==1) {
+				picture = "* *|   \n* *| * \n* *|   ";
+			}else if(rightSide==2) {
+				picture = "* *|*  \n* *|   \n* *|  *";
+			}else if(rightSide==3) {
+				picture = "* *|*  \n* *| * \n* *|  *";
+			}else if(rightSide==4) {
+				picture = "* *|* *\n* *|   \n* *|* *";
+			}else if(rightSide==5) {
+				picture = "* *|* *\n* *| * \n* *|* *";
+			}else if(rightSide==6) {
+				picture = "* *|* *\n* *|* *\n* *|* *";
+			}
 		}
+		
 		return picture;
 	}
+	
+	
+	
 	
 	
 	
